@@ -7,8 +7,8 @@ This is the demo website for the results of my aerial image colorisations an res
 Make sure you have [nodejs](https://nodejs.org/en/download/) installed. 
 
 ```sh
-git pull <this repo>
-cd <reponame>
+git pull https://github.com/warrieka/histo_ortho_viewer/
+cd histo_ortho_viewer
 npm i
 npm run build
 npm run preview
@@ -19,7 +19,7 @@ npm run preview
 
 `run start` will start the developement server on <http://localhost:5173>. 
 
-## Create a docker image for deployemt
+## Create a docker image for deployment
 
 Make sure you have [docker](https://docs.docker.com/get-docker/) installed. 
 
@@ -27,7 +27,6 @@ Make sure you have [docker](https://docs.docker.com/get-docker/) installed.
 docker image build -t histo_ortho .
 docker compose up -d
 ```
-
 This will create the image and run on port 80: <http://127.0.0.1>.
 
 To install a ssl-certificate for your site edit the [dockerfile](dockerfile) and the [nginx config (default.conf)](default.conf) and replace **yourdomain.com** by your domain before building. 
