@@ -33,7 +33,7 @@ export default function App() {
           <option value="Vlaanderen 1970">Vlaanderen 1970</option>
           <option value="Gent 1955">Gent 1955</option>
         </select>
-      <a target="_blank" href="https://github.com/warrieka/Ortho_Colorization" >
+      <a target="_blank" href="https://github.com/warrieka/histo_ortho_viewer" >
           <FaGithub title="Github"
               style={{"right": 2, "position": 'absolute' }} /></a> 
       </div>
