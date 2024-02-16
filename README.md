@@ -35,3 +35,9 @@ To Push to dockerhub, change username in the [compose.yml](compose.yml) if your 
 ```sh
 docker compose push
 ```
+
+## publish demo to github pages 
+
+```sh
+git subtree push --prefix dist origin gh-pages
+```
