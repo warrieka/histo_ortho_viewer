@@ -1,0 +1,15 @@
+
+services:
+  web:
+    build: .
+    image: warrieka/histo_ortho
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - webapp:/etc/nginx
+      - cert:/etc/letsencrypt
+
+volumes:
+  webapp:
+  cert:
