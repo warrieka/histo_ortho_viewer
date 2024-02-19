@@ -90,7 +90,7 @@ const layerList = {
         "title": 'Orthofotomozaïek Vlaanderen, kleinschalig, zwart-wit, 1m, 1971',
         "about": "Deze zwartwit luchtfoto van Vlaanderen is van 1971 en heeft een grondresolutie van 1m. Hij werd ingekleurd met mijn AI-algoritme.  Hij is ook wat gesmooth om de korreligheid te verwijderen.",
         "description": "De orthofotomozaïek is samengesteld uit luchtopnamen die tijdens het zomerseizoen van 1971 ingewonnen werden. Ze toont een gebiedsdekkende orthofotobedekking van het Vlaamse Gewest, inclusief het Brussels Hoofdstedelijk Gewest met een grondresolutie van 1 m. De opname werd uitgevoerd door Eurosense in opdracht van Agentschap voor Geografische Informatie.",
-        "url": "https://download.vlaanderen.be/bff/v1/products/1191/exampleimages/9D1418C9-6348-42A3-9734-FA336F4A6D3A",
+        "url": "https://www.vlaanderen.be/datavindplaats/catalogus/orthofotomozaiek-kleinschalig-zomeropnamen-panchromatisch-1971-vlaanderen",
         "source_grey": vlaanderen1971grey,
         "source_rbg": vlaanderen1971rbg,
         "xy": [487549, 6657367], "zoom": 12, "maxzoom": 17
