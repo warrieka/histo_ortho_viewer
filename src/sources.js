@@ -33,7 +33,7 @@ export let gent1955grey = new XYZ({
     projection: webMercator,
     crossOrigin: 'anonymous',
     attributions: [
-      "NGI: <a href='https://www.ngi.be/website/gebruiksvoorwaarden-cartoweb-be'>gebruiksvoorwaarden</a>",
+      "© Vlaamse overheid, Departement Mobiliteit en Openbare Werken, afdeling Algemene Technische Ondersteuning, cel fotogrammetrie",
     ],
   });
   
