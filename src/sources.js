@@ -15,6 +15,25 @@ for (let z = 0; z < 20; ++z) {
   matrixIds[z] = z;
 }
 
+export let antwerp_1940_1944_grey = new WMTS({
+  //info: https://geo.api.vlaanderen.be/OKZ/wmts?request=getcapabilities&service=wmts&version=1.0.0
+  url: 'https://tiles.arcgis.com/tiles/1KSVSmnHT2Lw9ea6/arcgis/rest/services/Luchtfotomozaiek_jaren_40/MapServer/WMTS',
+  attributions: [""],
+  crossOrigin: 'anonymous',
+  layer: 'Luchtfotomozaiek_jaren_40',
+  matrixSet: 'default028mm',
+  format: 'image/jpgpng',
+  projection: webMercator,
+  tileGrid: new WMTSTileGrid({
+    origin: getTopLeft(webmercatorExtent),
+    resolutions: resolutions,
+    matrixIds: matrixIds,
+  }),
+  style: 'default',
+  wrapX: true,
+  webmercatorExtent,
+});
+
 export let ngi1969 = new XYZ({
   url: 'https://www.ngi.be/tiles/arcgis/rest/services/seamless_carto__default__3857__1100/MapServer/tile/{z}/{y}/{x}',
   minZoom: 7,
@@ -55,6 +74,16 @@ export let vlaanderen1971grey = new WMTS({
     wrapX: true,
     webmercatorExtent,
   });
+
+export let antwerp_1940_1944_rbg = new GeoTIFF({
+  sources: [
+    {
+      url: 'https://storage.googleapis.com/histortho/antwerp_1940_1944.tif',
+    },
+  ],
+  convertToRGB: 'auto',
+  normalize: true,
+});
   
 export let vlaanderen1971rbg = new GeoTIFF({
     sources: [
@@ -94,7 +123,16 @@ const layerList = {
         "source_grey": vlaanderen1971grey,
         "source_rbg": vlaanderen1971rbg,
         "xy": [487549, 6657367], "zoom": 12, "maxzoom": 17
-    }
+    },
+    "Antwerpen 1940-1945":{
+      "title": 'Orthofotomozaïek Antwerpen, zwart-wit, heterogeen bronnen, 5 tot 1m, 1940-1945',
+      "about": "Deze zwartwit luchtfoto van Antwerpen is samengesteld uit verschildende heterogene luchtfoto's met belichting grondresolutie van ongeveer 5 tot 1 meter. Hij werd ingekleurd met mijn AI-algoritme.  Hij is ook bewerkt om belichting te matchen, korreligheid te verwijderen en de resolutie verhogen, hiervoor werd ondermeer ESRGAN algoritme gebruikt (\": Enhanced Super-Resolution Generative Adversarial Networks\" Xintao Wang et al. (2018)) .",
+      "description": "De orthofotomozaïek is samengesteld uit luchtopnamen door genomen door verschillende verkenningsvliegtuigen gedurende de 2de wereldoorlog, met als doel om als achtergrond te dienen op Antwerpen herdenkt.",
+      "url": "https://www.antwerpenherdenkt.be/nieuwe-pagina",
+      "source_grey": antwerp_1940_1944_grey,
+      "source_rbg": antwerp_1940_1944_rbg,
+      "xy": [487549, 6657367], "zoom": 12, "maxzoom": 17
+  }
 }
 
 export default layerList;
