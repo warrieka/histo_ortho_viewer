@@ -1,6 +1,11 @@
 # Colorize black and white aerial photos with AI
 
-This is the demo website for the results of my aerial image colorisations an restoration algorithm.
+This is the demo website to publish the results of my aerial image colorisation an restoration algorithm.
+
+We demo the application of the algoritm on 3 orthophoto mosaic's: 
+- A panchromatic orthophoto mosaic of Flanders in 1971, source: [datavindplaats](https://www.vlaanderen.be/datavindplaats/catalogus/orthofotomozaiek-kleinschalig-zomeropnamen-panchromatisch-1971-vlaanderen).
+- The city of ghent in the 1950's, Source: [hoe-zag-jouw-buurt-eruit-de-jaren-50](https://stad.gent/nl/cultuur-vrije-tijd/cultuur/hoe-zag-jouw-buurt-eruit-de-jaren-50).
+- A orthophoto mosaic of Antwerp derived from military reconnaissance photo's in second world war, the source mosaic was created by me for [antwerpenherdenkt](https://www.antwerpenherdenkt.be/nieuwe-pagina).
 
 ## Installation on your local device using `npm`
 
@@ -31,7 +36,7 @@ This will create the image and run on port 80: <http://127.0.0.1>.
 
 To install a ssl-certificate for your site edit the [dockerfile](dockerfile) and the [nginx config (default.conf)](default.conf) and replace **yourdomain.com** by your domain before building. 
 
-To Push to dockerhub, change username in the [compose.yml](compose.yml) if your are not me, then:
+To Push to dockerhub, change username in the [compose.yml](compose.yml) if you are not me, then:
 ```sh
 docker compose push
 ```

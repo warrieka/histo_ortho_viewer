@@ -23,8 +23,8 @@ export default function App() {
 
   return <>
     <div style={{width:"100vw", height:"100vh", overflow: "hidden"}} className="App">
-      <div className="header" style={{'margin': 2}} >
-        <label htmlFor="layerselect">Foto: </label> 
+      <div className="header" style={{'margin': 1}} >
+        <label style={{paddingLeft: 5}} htmlFor="layerselect">Foto: </label> 
         <select id="layerselect" defaultValue={activeMap}
                   onChange={e => {
                     setactiveMap(e.target.value);
@@ -34,6 +34,8 @@ export default function App() {
           <option value="Gent 1955">Gent 1955</option>
           <option value="Antwerpen 1940-1945">Antwerpen 1940-1945</option>
         </select>
+        <span style={{paddingLeft:15, display: 'inline-block'}}>
+          Zwart-Witte luchtfoto's inkleuren met AI</span>
       <a target="_blank" href="https://github.com/warrieka/histo_ortho_viewer" >
           <FaGithub title="Github"
               style={{"right": 2, "position": 'absolute' }} /></a> 

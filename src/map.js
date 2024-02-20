@@ -10,7 +10,11 @@ const Origaerial = new TileLayer({
   title:'Originele zwartwitte luchtfoto',
 });
 const AIaerial = new GLTileLayer({
-  title: 'Met AI ingekleurde en gerestaureerde orthofoto',
+  title: 'Met AI ingekleurde en gerestaureerde orthofoto', 
+});
+
+const basemap = new TileLayer({
+  title: 'achtergrond', zIndex: -99
 });
 
 const olmap = new Map({
@@ -69,6 +73,11 @@ export function resetMap(activeMap){
     })
     Origaerial.setSource(  layerList[activeMap].source_grey );
     AIaerial.setSource(  layerList[activeMap].source_rbg ); 
-    olmap.setLayers([AIaerial, Origaerial]);
+    basemap.setSource( layerList[activeMap].basemap);
+
+    olmap.setLayers([AIaerial, Origaerial ]);
+    if (layerList[activeMap].basemap !== null){
+      olmap.addLayer(basemap);
+    }
     olmap.setView(new_view);
 } 

@@ -34,12 +34,17 @@ export let antwerp_1940_1944_grey = new WMTS({
   webmercatorExtent,
 });
 
+let ngi1939 =	new XYZ({
+  url: "https://www.ngi.be/tiles/arcgis/rest/services/seamless_carto__default__3857__800/MapServer/tile/{z}/{y}/{x}",
+  minZoom: 7 , maxZoom: 17, 
+  projection: webMercator,   crossOrigin: 'anonymous',
+  attributions: ["NGI: <a href='https://www.ngi.be/website/gebruiksvoorwaarden-cartoweb-be'>gebruiksvoorwaarden</a>"]
+});
+
 export let ngi1969 = new XYZ({
   url: 'https://www.ngi.be/tiles/arcgis/rest/services/seamless_carto__default__3857__1100/MapServer/tile/{z}/{y}/{x}',
-  minZoom: 7,
-  maxZoom: 17,
-  projection: webMercator,
-  crossOrigin: 'anonymous',
+  minZoom: 7, maxZoom: 17,
+  projection: webMercator, crossOrigin: 'anonymous',
   attributions: [
     "NGI: <a href='https://www.ngi.be/website/gebruiksvoorwaarden-cartoweb-be'>gebruiksvoorwaarden</a>",
   ],
@@ -78,7 +83,7 @@ export let vlaanderen1971grey = new WMTS({
 export let antwerp_1940_1944_rbg = new GeoTIFF({
   sources: [
     {
-      url: 'https://storage.googleapis.com/histortho/antwerp_1940_1944.tif',
+      url: 'https://storage.googleapis.com/histortho/antwerp_luchtfoto_1940_1945_web.tif',
     },
   ],
   convertToRGB: 'auto',
@@ -102,7 +107,7 @@ export  let gent1955rbg = new GeoTIFF({
       },
     ],
     convertToRGB: 'auto',
-    normalize: true,
+    normalize: true
   });
 
 const layerList = {
@@ -113,6 +118,7 @@ const layerList = {
         "url": 'https://stad.gent/nl/cultuur-vrije-tijd/cultuur/hoe-zag-jouw-buurt-eruit-de-jaren-50',
         "source_grey": gent1955grey,
         "source_rbg": gent1955rbg,
+        "basemap": null,
         "xy": [415515 , 6629926], "zoom": 12, "maxzoom": 19
     },
     "Vlaanderen 1970":{
@@ -122,6 +128,7 @@ const layerList = {
         "url": "https://www.vlaanderen.be/datavindplaats/catalogus/orthofotomozaiek-kleinschalig-zomeropnamen-panchromatisch-1971-vlaanderen",
         "source_grey": vlaanderen1971grey,
         "source_rbg": vlaanderen1971rbg,
+        "basemap": null,
         "xy": [487549, 6657367], "zoom": 12, "maxzoom": 17
     },
     "Antwerpen 1940-1945":{
@@ -131,6 +138,7 @@ const layerList = {
       "url": "https://www.antwerpenherdenkt.be/nieuwe-pagina",
       "source_grey": antwerp_1940_1944_grey,
       "source_rbg": antwerp_1940_1944_rbg,
+      "basemap": null,
       "xy": [487549, 6657367], "zoom": 12, "maxzoom": 17
   }
 }
