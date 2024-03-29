@@ -38,7 +38,9 @@ let ngi1939 =	new XYZ({
   url: "https://www.ngi.be/tiles/arcgis/rest/services/seamless_carto__default__3857__800/MapServer/tile/{z}/{y}/{x}",
   minZoom: 7 , maxZoom: 17, 
   projection: webMercator,   crossOrigin: 'anonymous',
-  attributions: ["NGI: <a href='https://www.ngi.be/website/gebruiksvoorwaarden-cartoweb-be'>gebruiksvoorwaarden</a>"]
+  attributions: [
+    "NGI: <a href='https://www.ngi.be/website/gebruiksvoorwaarden-cartoweb-be'>gebruiksvoorwaarden</a>"
+  ]
 });
 
 export let ngi1969 = new XYZ({
@@ -59,7 +61,7 @@ export let gent1955grey = new XYZ({
     attributions: [
       "© Vlaamse overheid, Departement Mobiliteit en Openbare Werken, afdeling Algemene Technische Ondersteuning, cel fotogrammetrie",
     ],
-  });
+});
   
 export let vlaanderen1971grey = new WMTS({
     //info: https://geo.api.vlaanderen.be/OKZ/wmts?request=getcapabilities&service=wmts&version=1.0.0
@@ -78,7 +80,7 @@ export let vlaanderen1971grey = new WMTS({
     style: '',
     wrapX: true,
     webmercatorExtent,
-  });
+});
 
 export let antwerp_1940_1944_rbg = new GeoTIFF({
   sources: [
@@ -98,7 +100,7 @@ export let vlaanderen1971rbg = new GeoTIFF({
     ],
     convertToRGB: 'auto',
     normalize: true,
-  });
+});
   
 export  let gent1955rbg = new GeoTIFF({
     sources: [
@@ -108,7 +110,7 @@ export  let gent1955rbg = new GeoTIFF({
     ],
     convertToRGB: 'auto',
     normalize: true
-  });
+});
 
 const layerList = {
     "Gent 1955":{
