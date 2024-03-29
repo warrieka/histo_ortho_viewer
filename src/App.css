@@ -33,3 +33,8 @@ body {
   top: 2.5em;
   color: lightgrey;
 }
+
+#moreInfo {
+  color: #777;
+  font-style: italic;
+}

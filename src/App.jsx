@@ -11,7 +11,7 @@ import 'react-responsive-modal/styles.css';
 
 export default function App() {
   let [modalOpen, setmodalOpen] = useState(true);
-  let [activeMap, setactiveMap] = useState('Vlaanderen 1970');
+  let [activeMap, setactiveMap] = useState( "Antwerpen 1940-1945" );
 
   useEffect(() => {
     initMap(activeMap);
@@ -21,18 +21,22 @@ export default function App() {
     resetMap(activeMap);
   }, [activeMap]);
 
+  let layerNames = Object.keys(layerList);
+  let layerOptions = layerNames.map(e => 
+    <option key={e} value={e}>{e}</option>
+  )
+  
   return <>
     <div style={{width:"100vw", height:"100vh", overflow: "hidden"}} className="App">
       <div className="header" style={{'margin': 1}} >
         <label style={{paddingLeft: 5}} htmlFor="layerselect">Foto: </label> 
         <select id="layerselect" defaultValue={activeMap}
                   onChange={e => {
+                    console.log(e.target.value);
                     setactiveMap(e.target.value);
                     setmodalOpen(true);
                   } } >
-          <option value="Vlaanderen 1970">Vlaanderen 1970</option>
-          <option value="Gent 1955">Gent 1955</option>
-          <option value="Antwerpen 1940-1945">Antwerpen 1940-1945</option>
+          { layerOptions } 
         </select>
         <span style={{paddingLeft:15, display: 'inline-block'}}>
           Zwart-Witte luchtfoto's inkleuren met AI</span>
@@ -53,11 +57,14 @@ export default function App() {
       >
       <h2>{ layerList[activeMap]["title"] }</h2>
       <p><b>{ layerList[activeMap]["about"] }</b></p>
-      <p><i>{ layerList[activeMap]["description"] }</i></p>
-      <a target="_blank" href={ layerList[activeMap]["url"] }>Meer info</a>
+      <b>Bron:</b>
+      <p><i>{ layerList[activeMap]["description"] }</i> </p>
+
       <center>
-        <button style={{'color': 'whitesmoke'}}
-                onClick={() => setmodalOpen(false)}>Sluiten</button></center> 
+        <p><a target="_blank" href={ layerList[activeMap]["url"] }>Meer info over deze bron</a></p>
+        <button style={{'color': '#777'}}
+                  onClick={() => setmodalOpen(false)}>Sluiten</button>
+      </center> 
     </Modal> 
   </>
 }

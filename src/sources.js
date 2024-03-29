@@ -115,17 +115,17 @@ export  let gent1955rbg = new GeoTIFF({
 const layerList = {
     "Gent 1955":{
         "title": 'Orthofotomozaïek Gent, grootschalig, zwart-wit, 25cm, 1955',
-        "about": "Deze zwartwit luchtfoto van Gent is van 1955 en had een grondresolutie van 10cm,maar dit werd opgeschaald naar 25cm om performantie redenen.  Hij werd ingekleurd met mijn AI-algoritme. Hij is ook wat gesmooth om de korreligheid te verwijderen.",
-        "description": "De teams Stadsarcheologie en Data & Informatie van stad Gent ontwikkelden deze mozaiek op basis van 2.100 luchtfoto's,  afkomstig uit een vergeten luchtfotocollectie. Net na de Tweede Wereldoorlog nam de overheid duizenden luchtfotos gemaaktter ondersteuning van de grootschalige infrastructuurwerken die in ons land gepland stonden. Eens de projecten gerealiseerd waren, verloren ze hun nut en bleven zin ide kast liggen. De opname werd uitgevoerd door het Ministerie Mobiliteit en Openbare Werken, afdeling Fotogrammetrie.",
+        "about": "Deze zwartwit luchtfoto van Gent is van 1955 en had een grondresolutie van 10cm, maar dit werd opgeschaald naar 25cm om performantie redenen.  Hij werd ingekleurd met mijn colorisatie AI-algoritme. Hij is ook wat gesmooth om de korreligheid te verwijderen.",
+        "description": "De teams Stadsarcheologie en Data & Informatie van stad Gent ontwikkelden deze mozaiek op basis van 2100 luchtfoto's,  afkomstig uit een vergeten luchtfotocollectie. Net na de Tweede Wereldoorlog nam de overheid duizenden luchtfotos gemaaktter ondersteuning van de grootschalige infrastructuurwerken die in ons land gepland stonden. Eens de projecten gerealiseerd waren, verloren ze hun nut en bleven zin ide kast liggen. De opname werd uitgevoerd door het Ministerie Mobiliteit en Openbare Werken, afdeling Fotogrammetrie.",
         "url": 'https://stad.gent/nl/cultuur-vrije-tijd/cultuur/hoe-zag-jouw-buurt-eruit-de-jaren-50',
         "source_grey": gent1955grey,
         "source_rbg": gent1955rbg,
         "basemap": null,
-        "xy": [415515 , 6629926], "zoom": 12, "maxzoom": 19
+        "xy": [415515 , 6629926], "zoom": 13, "maxzoom": 19
     },
-    "Vlaanderen 1970":{
+    "Vlaanderen 1971":{
         "title": 'Orthofotomozaïek Vlaanderen, kleinschalig, zwart-wit, 1m, 1971',
-        "about": "Deze zwartwit luchtfoto van Vlaanderen is van 1971 en heeft een grondresolutie van 1m. Hij werd ingekleurd met mijn AI-algoritme.  Hij is ook wat gesmooth om de korreligheid te verwijderen.",
+        "about": "Deze zwartwit luchtfoto van Vlaanderen is van 1971 en heeft een grondresolutie van 1m. Hij werd ingekleurd met mijn colorisatie AI-algoritme.  Hij is ook wat gesmooth om de korreligheid te verwijderen.",
         "description": "De orthofotomozaïek is samengesteld uit luchtopnamen die tijdens het zomerseizoen van 1971 ingewonnen werden. Ze toont een gebiedsdekkende orthofotobedekking van het Vlaamse Gewest, inclusief het Brussels Hoofdstedelijk Gewest met een grondresolutie van 1 m. De opname werd uitgevoerd door Eurosense in opdracht van Agentschap voor Geografische Informatie.",
         "url": "https://www.vlaanderen.be/datavindplaats/catalogus/orthofotomozaiek-kleinschalig-zomeropnamen-panchromatisch-1971-vlaanderen",
         "source_grey": vlaanderen1971grey,
@@ -135,13 +135,13 @@ const layerList = {
     },
     "Antwerpen 1940-1945":{
       "title": 'Orthofotomozaïek Antwerpen, zwart-wit, heterogeen bronnen, 5 tot 1m, 1940-1945',
-      "about": "Deze zwartwit luchtfoto van Antwerpen is samengesteld uit verschildende heterogene luchtfoto's met belichting grondresolutie van ongeveer 5 tot 1 meter. Hij werd ingekleurd met mijn AI-algoritme.  Hij is ook bewerkt om belichting te matchen, korreligheid te verwijderen en de resolutie verhogen, hiervoor werd ondermeer ESRGAN algoritme gebruikt (\": Enhanced Super-Resolution Generative Adversarial Networks\" Xintao Wang et al. (2018)) .",
+      "about": "Deze zwartwit luchtfoto van Antwerpen is samengesteld uit verschildende heterogene luchtfoto's met belichting grondresolutie van ongeveer 5 tot 1 meter. Hij werd ingekleurd met mijn colorisatie AI-algoritme.  Hij is ook bewerkt om belichting te matchen, korreligheid te verwijderen en de resolutie verhogen, hiervoor werd ondermeer ESRGAN[0] algoritme gebruikt (\"Enhanced Super-Resolution Generative Adversarial Networks\" Xintao Wang et al. (2018)) .",
       "description": "De orthofotomozaïek is samengesteld uit luchtopnamen door genomen door verschillende verkenningsvliegtuigen gedurende de 2de wereldoorlog, met als doel om als achtergrond te dienen op Antwerpen herdenkt.",
       "url": "https://www.antwerpenherdenkt.be/nieuwe-pagina",
       "source_grey": antwerp_1940_1944_grey,
       "source_rbg": antwerp_1940_1944_rbg,
       "basemap": null,
-      "xy": [487549, 6657367], "zoom": 12, "maxzoom": 17
+      "xy": [487549, 6657367], "zoom": 13, "maxzoom": 17
   }
 }
 
