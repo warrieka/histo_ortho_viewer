@@ -1,47 +1,23 @@
 <svg width="100" height="100" version="1.1"
     id="prefix__svg50" xmlns="http://www.w3.org/2000/svg">
     <style type="text/css" id="style2">.prefix__st1{fill:#fff}</style>
-    <defs id="prefix__defs9">
-        <linearGradient id="prefix__backgroundGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+    <defs id="prefix__grey">
+        <linearGradient id="prefix__bw" x1="80%" y1="100%" x2="0%" y2="10%">
             <stop offset="0%" stop-color="#000" id="prefix__stop4" />
-            <stop offset="100%" stop-color="#eee" id="prefix__stop6" />
+            <stop offset="50%" stop-color="#eee" id="prefix__stop4" />
+            <stop offset="100%" stop-color="#00" id="prefix__stop6" />
         </linearGradient>
     </defs>
-    <path fill="url(#prefix__rainbow)" id="prefix__rect11" d="M.171 0h100v100h-100z" />
-    <defs id="prefix__defs28">
-        <linearGradient id="prefix__rainbow" x1="0" y1="0" x2="0" y2="100"
-            gradientUnits="userSpaceOnUse" gradientTransform="translate(.17)">
-            <stop offset="0%" stop-color="red" id="prefix__stop13" />
-            <stop offset="33.333%" stop-color="orange" id="prefix__stop15" />
-            <stop offset="66.666%" stop-color="#ff0" id="prefix__stop17" />
-            <stop offset="100%" stop-color="green" id="prefix__stop19" />
+    <defs id="prefix__color">
+        <linearGradient id="prefix__rainbow" x1="10%" y1="0%" x2="100%" y2="80%"
+            gradientUnits="userSpaceOnUse" gradientTransform="rotate(0)">
+            <stop offset="0%" stop-color="#f3172d" id="prefix__stop13" />
+            <stop offset="25%" stop-color="orange" id="prefix__stop15" />
+            <stop offset="50%" stop-color="yellow" id="prefix__stop17" />
+            <stop offset="75%" stop-color="green" id="prefix__stop19" />
+            <stop offset="100%" stop-color="blue" id="prefix__stop19" />
         </linearGradient>
     </defs>
-    <g id="prefix__g32" transform="matrix(2.22364 0 0 2.0662 -115.69 -79.368)">
-        <path class="prefix__st1"
-            d="M62.4 44.2l6.3 4.7c.6.5 1.4.7 2.1.7.8 0 1.6-.3 2.2-.8l3.7-3v12.1l-6.2 4.8-6.4-5.1c-.6-.5-1.4-.8-2.2-.8-.7 0-1.5.2-2.1.7L56 60.3V49l6.4-4.8m16.8-4c-.1 0-.2 0-.4.1l-7.7 6.1c-.1.1-.2.1-.4.1-.1 0-.2 0-.3-.1l-7.8-5.8c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3.1l-8.8 6.6c-.1.1-.2.3-.2.5V65c0 .3.3.6.6.6.1 0 .2 0 .3-.1l7.7-5.5c.1-.1.2-.1.3-.1.1 0 .3 0 .4.1l7.9 6.3c.1.1.2.1.4.1.1 0 .2 0 .3-.1l8.6-6.7c.1-.1.2-.3.2-.4V40.8c.1-.4-.2-.6-.5-.6z"
-            id="prefix__path30" />
-    </g>
-    <path class="prefix__st1"
-        d="M95.112 97.705h-2.224c-1.112 0-2.224-.826-2.224-1.86v-36.57c0-1.034.89-1.86 2.224-1.86h2.224c1.112 0 2.223.826 2.223 1.86v36.57c0 1.24-.89 1.86-2.223 1.86z"
-        id="prefix__path36" stroke-width="2.143" />
-    <path class="prefix__st1"
-        d="M76.655 97.705h-2.223c-1.112 0-2.224-.826-2.224-1.86V59.482c0-1.033.89-1.86 2.224-1.86h2.223c1.112 0 2.224.827 2.224 1.86v36.572c0 1.033-1.112 1.652-2.224 1.652z"
-        id="prefix__path38" stroke-width="2.143" />
-    <path class="prefix__st1"
-        d="M58.422 97.705h-2.224c-1.112 0-2.224-.826-2.224-1.86v-36.57c0-1.034.89-1.86 2.224-1.86h2.224c1.111 0 2.223.826 2.223 1.86v36.57c0 1.24-1.112 1.86-2.223 1.86z"
-        id="prefix__path40" stroke-width="2.143" />
-    <path class="prefix__st1"
-        d="M95.334 63.613h-39.58c-1.113 0-2.002-.826-2.002-2.066V59.48c0-1.033.89-2.067 2.001-2.067h39.581c1.112 0 2.001.827 2.001 2.067v2.066c0 1.24-.89 2.066-2 2.066z"
-        id="prefix__path42" stroke-width="2.143" />
-    <path class="prefix__st1"
-        d="M95.112 80.97H55.976c-1.112 0-2.002-.827-2.002-2.067v-2.066c0-1.033.89-2.066 2.002-2.066h39.136c1.112 0 2.001.826 2.001 2.066v2.066c0 1.033-.89 2.066-2.001 2.066z"
-        id="prefix__path44" stroke-width="2.143" />
-    <path class="prefix__st1"
-        d="M95.334 97.912h-39.58c-1.113 0-2.002-.826-2.002-2.066V93.78c0-1.033.89-2.067 2.001-2.067h39.581c1.112 0 2.001.827 2.001 2.067v2.066c0 1.033-.89 2.066-2 2.066z"
-        id="prefix__path46" stroke-width="2.143" />
-    <path d="M21.81 9.996l.905 29.822" id="prefix__path975" fill="#fff" stroke="#fff"
-        stroke-width="6.308" stroke-linecap="square" stroke-dasharray="none" />
-    <path d="M41.843 20.007l.587 31.976" id="prefix__path977" fill="#fff" stroke="#fff"
-        stroke-width="6.401" stroke-linecap="square" stroke-dasharray="none" />
+    <path fill="url(#prefix__bw)" d="M 0 0 L 100 100 L 100 0 z"></path>
+    <path fill="url(#prefix__rainbow)" d="M 100 100 L 0 100 L 0 0 z"></path>
 </svg>
