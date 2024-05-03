@@ -11,7 +11,6 @@ import InfoWindow from './infoWindow'
 //#css
 import './App.css'
 import 'ol/ol.css';
-import 'react-responsive-modal/styles.css';
 
 export default function App() {
   let layerNames = Object.keys(layerList);
