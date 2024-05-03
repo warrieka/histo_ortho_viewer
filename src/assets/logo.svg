@@ -2,10 +2,9 @@
     id="prefix__svg50" xmlns="http://www.w3.org/2000/svg">
     <style type="text/css" id="style2">.prefix__st1{fill:#fff}</style>
     <defs id="prefix__grey">
-        <linearGradient id="prefix__bw" x1="80%" y1="100%" x2="0%" y2="10%">
+        <linearGradient id="prefix__bw" x1="10%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stop-color="#000" id="prefix__stop4" />
-            <stop offset="50%" stop-color="#eee" id="prefix__stop4" />
-            <stop offset="100%" stop-color="#00" id="prefix__stop6" />
+            <stop offset="100%" stop-color="#eee" id="prefix__stop6" />
         </linearGradient>
     </defs>
     <defs id="prefix__color">
