@@ -13,12 +13,10 @@ const AIaerial = new GLTileLayer({
   title: 'Met AI ingekleurde en gerestaureerde orthofoto', 
 });
 
-const basemap = new TileLayer({
-  title: 'achtergrond', zIndex: -99
-});
+const basemap = new TileLayer({zIndex: -99});
 
 const olmap = new Map({
-  layers: [Origaerial, AIaerial],
+  layers: [Origaerial, AIaerial, basemap ],
   view: new View({
     center: [415515 , 6629926], //[487549.1, 6657367.9],
     zoom: 12,
@@ -63,6 +61,12 @@ export function initMap(activeMap){
     let scaleBar = new ScaleLine({bar: true})
     olmap.addControl(scaleBar);
     return olmap;
+}
+
+export const toggleBasemap = function() {
+    let onoff = !basemap.getVisible()
+    basemap.setVisible(onoff);
+    return onoff;
 }
 
 export function resetMap(activeMap){

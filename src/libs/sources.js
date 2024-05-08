@@ -4,6 +4,7 @@ import WMTS from 'ol/source/WMTS';
 import WMTSTileGrid from 'ol/tilegrid/WMTS';
 import {get as getProjection} from 'ol/proj';
 import {getTopLeft, getWidth} from 'ol/extent';
+import backgrounds from './baselayers';
 
 const webMercator = getProjection('EPSG:3857');
 const webmercatorExtent = webMercator.getExtent();
@@ -32,15 +33,6 @@ export let antwerp_1940_1944_grey = new WMTS({
   style: 'default',
   wrapX: true,
   webmercatorExtent,
-});
-
-let ngi1939 =	new XYZ({
-  url: "https://www.ngi.be/tiles/arcgis/rest/services/seamless_carto__default__3857__800/MapServer/tile/{z}/{y}/{x}",
-  minZoom: 7 , maxZoom: 17, 
-  projection: webMercator,   crossOrigin: 'anonymous',
-  attributions: [
-    "NGI: <a href='https://www.ngi.be/website/gebruiksvoorwaarden-cartoweb-be'>gebruiksvoorwaarden</a>"
-  ]
 });
 
 export let ngi1969 = new XYZ({
@@ -122,7 +114,7 @@ const layerList = {
       "url": "https://www.antwerpenherdenkt.be/nieuwe-pagina",
       "source_grey": antwerp_1940_1944_grey,
       "source_rbg": antwerp_1940_1944_rbg,
-      "basemap": null,
+      "basemap": backgrounds['ngi1939'],
       "xy": [487549, 6657367], "zoom": 13, "maxzoom": 17
     },
     "Gent 1955":{
@@ -134,7 +126,7 @@ const layerList = {
         "url": 'https://stad.gent/nl/cultuur-vrije-tijd/cultuur/hoe-zag-jouw-buurt-eruit-de-jaren-50',
         "source_grey": gent1955grey,
         "source_rbg": gent1955rbg,
-        "basemap": null,
+        "basemap":  backgrounds['ngi1969'],
         "xy": [415515 , 6629926], "zoom": 13, "maxzoom": 19
     },
     "Vlaanderen 1971":{
@@ -146,7 +138,7 @@ const layerList = {
         "url": "https://www.vlaanderen.be/datavindplaats/catalogus/orthofotomozaiek-kleinschalig-zomeropnamen-panchromatisch-1971-vlaanderen",
         "source_grey": vlaanderen1971grey,
         "source_rbg": vlaanderen1971rbg,
-        "basemap": null,
+        "basemap":  backgrounds['ngi1981'],
         "xy": [487549, 6657367], "zoom": 12, "maxzoom": 17
     }
 }

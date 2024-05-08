@@ -50,8 +50,11 @@ body {
 #appTitle > h3 {
   padding-left:15px; 
   margin-top:1px;
+  font-size: x-large;
   display: inline-block;
   color: aliceblue;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
 }
 
 #layerselect {
@@ -62,12 +65,16 @@ body {
   margin-left:10px;
 }
 
-#menuHideShowButton{
+/* .menuHideShowButton{
   font-size: 16px;
   color: white;
   width: 52px; height: 52px;
   text-align: right;
 }
+.menuHideShowButton:hover {
+  font-weight: bold;
+  color: #bef6fd;
+} */
 
 .ant-menu-inline-collapsed >.ant-menu-item {
   padding-inline: 10px;
