@@ -43,6 +43,8 @@ export default function App() {
   return (
   <Layout style={{ minHeight: '100vh' }}>
     <InfoWindow activemap={activeMap} open={openModal} setOpen={() => setOpenModal(false)} />
+
+    { !hideBanner ?
     <div style={{"position":"absolute", "top": 0, "right": 0, "zIndex": 99, 
                  "textAlign":'end', "width": 200, "height": 30, 'padding':5 }}>
         <Tooltip title="In deze Jupyter notebook beschrijf ik hoe je zo'n colorisatie model kan trainen." >
@@ -51,7 +53,8 @@ export default function App() {
         <Tooltip title="Bekijk de code van deze viewer op Github" >
           <a target="_blank" href="https://github.com/warrieka/histo_ortho_viewer"><BsGithub/> Github</a>
         </Tooltip>
-    </div>
+      
+    </div> : null }
 
     <Header style={{ height: hideBanner? '0px':'60px', backgroundImage:"url(./logo.svg)",  backgroundSize: "100% 100%" }} >
         
@@ -60,7 +63,8 @@ export default function App() {
         </div>
 
     </Header>
-    
+
+
     <Layout>
     <Sider trigger={null} collapsible collapsed={collapsedSide}>
         
@@ -88,7 +92,7 @@ export default function App() {
           <Tooltip placement="left" title={collapsedSide? 'Achtergrond kaart aan/uit': null} >
             <Switch id="basemapSwitch" onClick={e => setbaseMap( toggleBasemap(e)) } value={basemapOn} ></Switch>
           </Tooltip>
-          <label for="basemapSwitch" style={{ marginLeft: 4, color:"whitesmoke"}}
+          <label htmlFor="basemapSwitch" style={{ marginLeft: 4, color:"whitesmoke"}}
             >{collapsedSide? '': 'Achtergrond aan/uit'}</label> 
             <Button icon={<BsEnvelope/>} style={{paddingLeft:2, paddingTop:5}} 
                     type="link" href="mailto:kaywarrie@gmail.com">{collapsedSide? 'mail': 'Contacteer mij'}</Button><br/>

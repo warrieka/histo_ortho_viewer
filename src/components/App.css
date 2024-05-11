@@ -39,6 +39,7 @@ body {
   z-index: 999;
   top: .5em;
   color: wheat;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 #infoRight {
@@ -47,6 +48,7 @@ body {
   z-index: 999;
   top: .5em;
   color: lightgrey;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 #appTitle {
