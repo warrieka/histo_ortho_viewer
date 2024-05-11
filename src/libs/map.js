@@ -63,10 +63,10 @@ export function initMap(activeMap){
     return olmap;
 }
 
-export const toggleBasemap = function() {
-    let onoff = !basemap.getVisible()
-    basemap.setVisible(onoff);
-    return onoff;
+export const toggleBasemap = function( onoff ) {
+    let turn_on = !onoff ? !basemap.getVisible() : onoff;
+    basemap.setVisible(turn_on);
+    return turn_on;
 }
 
 export function resetMap(activeMap){

@@ -28,6 +28,11 @@ body {
   right: 0;
 }
 
+.menuHideShowButton {
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
 #infoLeft {
   position: absolute;
   left: 2.5em;
@@ -47,15 +52,30 @@ body {
 #appTitle {
   text-align: center;
 }
+
 #appTitle > h3 {
   padding-left:15px; 
+  padding-top:1px; 
   margin-top:1px;
   font-size: x-large;
   display: inline-block;
   color: aliceblue;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-
 }
+
+Header {
+  padding: 0px;
+  width: 100vw;
+ 
+}
+
+#bottombuttons {
+  bottom: 0px; 
+  position: absolute;
+  align-items: center;
+  margin: 10px;
+}
+
 
 #layerselect {
   width: 200px;
@@ -64,17 +84,6 @@ body {
 .menuButtons > * {
   margin-left:10px;
 }
-
-/* .menuHideShowButton{
-  font-size: 16px;
-  color: white;
-  width: 52px; height: 52px;
-  text-align: right;
-}
-.menuHideShowButton:hover {
-  font-weight: bold;
-  color: #bef6fd;
-} */
 
 .ant-menu-inline-collapsed >.ant-menu-item {
   padding-inline: 10px;
@@ -85,3 +94,4 @@ body {
   rgba(255, 255, 255, 1) 0%,
   rgba(0, 0, 0, 1) 100%);
 }
+
