@@ -1,4 +1,4 @@
-import { Modal } from 'antd';
+import { Modal, Button } from 'antd';
 import layerList from "../libs/sources";
   
 
@@ -6,7 +6,8 @@ let InfoWindow = ({activemap, open, setOpen}) =>{
   return <Modal
       open={open}
       title={layerList[activemap]["title"]}
-      footer={null}
+      footer={<Button type="primary" key="back" onClick={setOpen}>
+      Sluiten</Button>}
       onOk={setOpen}
       onCancel={setOpen}
     >

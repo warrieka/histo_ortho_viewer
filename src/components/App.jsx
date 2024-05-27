@@ -34,7 +34,7 @@ export default function App() {
   let menuItems = layerNames.map( (e) => {
     let layer = layerList[e];
     return {key: e, 
-            icon: <span >{layer.year}</span> ,
+            icon: <span >{layer.year}</span>,
             label: layer.shortname, 
             title:layer.title}} )
 
@@ -95,7 +95,7 @@ export default function App() {
           <label htmlFor="basemapSwitch" style={{ marginLeft: 4, color:"whitesmoke"}}
             >{collapsedSide? '': 'Achtergrond aan/uit'}</label> 
             <Button icon={<BsEnvelope/>} style={{paddingLeft:2, paddingTop:5}} 
-                    type="link" href="mailto:kaywarrie@gmail.com">{collapsedSide? 'mail': 'Contacteer mij'}</Button><br/>
+                    type="link" href="mailto:kaywarrie@gmail.com">mail</Button><br/>
         </div>
       </Sider>
 
